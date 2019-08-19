@@ -1,19 +1,26 @@
 $("body").addClass("disable-scroll");
+$('.mainst').hide()
+var fadeTime = 4000;
 
-var fadeTime = 7500;
-$(function(){  // $(document).ready shorthand
 
-  $('.mainst').hide().fadeIn(fadeTime);
+
+$('#prelod').fadeOut(fadeTime, function() {
+  $(this).remove();
 
 });
 
 
+
+
+//$(function(){  // $(document).ready shorthand
+
+
+
+//$('.mainst').hide().fadeIn(fadeTime);
+
+//});
+
 setTimeout(function() {
-  $('#prelod').fadeOut(fadeTime, function() {
-    $(this).remove();
+  $('.mainst').hide().fadeIn('fast');
     $("body").removeClass("disable-scroll")
-  });
-
-
-
-}, 2000);
+}, 3000);
